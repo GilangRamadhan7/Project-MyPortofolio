@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-image: url(../asset/aurora.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* navbar */
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  top: 10px;
+  padding: 10px 0;
+  max-width: 70%;
+  margin: auto;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0);
+  border-radius: 100px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.7px);
+  -webkit-backdrop-filter: blur(8.7px);
+  border: 1px solid rgba(255, 255, 255, 0.37);
+  z-index: 10;
+}
+
+header .navbar-title h1 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 24px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-title h1 span {
+  color: #46bd86;
+}
+
+.navbar-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-nav ul li a:hover {
+  border-bottom: 2px solid #46bd86;
+  border-radius: 2px;
+  color: #46bd86;
+  transition: color 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* breakpoint navbar */
+@media (max-width: 600px) {
+  header nav ul {
+    display: none;
+  }
+}
+
+/* hero-section */
+.hero-section h2 {
+  font-size: 28px;
+  color: #46bd86;
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+  color: #fff;
+  scroll-margin-top: 100px;
+  line-height: 1.4;
+}
+
+.hero-content {
+  z-index: 2;
+  max-width: 30rem;
+  padding-left: 7rem;
+  margin-bottom: 1.2rem;
+}
+
+.hero-content p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.cta {
+  margin-top: 5px;
+  color: whitesmoke;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  /* From https://css.glass */
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.11);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.hero-content .cta:hover {
+  transform: scale(1.1);
+  background-color: #46bd86;
+  transition: 0.2s ease-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-image img {
+  width: 29rem;
+  height: auto;
+  margin-bottom: 2.5rem;
+  margin-right: 1rem;
+  z-index: 2;
+}
+
+/* about-section */
+.about-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* height: 70vh; */
+  max-width: 65%;
+  margin: 12px auto;
+  color: #fff;
+  scroll-margin-top: 138px;
+}
+
+.about-image img {
+  width: 16rem;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.about-content {
+  max-width: 25rem;
+}
+
+.about-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-section p {
+  font-size: 17px;
+  line-height: 1.6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* skills section */
+.skills-section {
+  margin-top: 3rem;
+  padding: 150px 300px;
+  scroll-margin-top: 50px;
+}
+
+.skills-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
+  line-height: 1.4;
+}
+
+.skills-title h2 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.skills-card p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 25px;
+}
+
+.skills-grid .skills-card {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  /* From https://css.glass */
+  padding: 12px 0;
+  background: rgba(255, 255, 255, 0.11);
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.skills-grid .skills-card:hover {
+  transform: scale(1.1);
+  transition: 0.1s ease;
+}
+
+.skills-card .fa-brands {
+  margin-top: 10px;
+  font-size: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.skills-card .fa-html5 {
+  color: #f54927;
+}
+
+.skills-card .fa-css3-alt {
+  color: #00bfff;
+}
+
+.skills-card .fa-square-js {
+  color: #f0db4f;
+}
+
+.skills-card .fa-bootstrap {
+  color: #8612fb;
+}
+
+/* contact section */
+.contact-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 150px 300px;
+  scroll-margin-top: -5px;
+}
+
+.contact-title {
+  color: whitesmoke;
+  max-width: 12rem;
+}
+
+.contact-title h2 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contact-title p {
+  margin-top: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contact-wrapper {
+  /* From https://css.glass */
+  padding: 25px 40px;
+  background: rgba(255, 255, 255, 0.11);
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.contact-wrapper form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 400;
+  color: whitesmoke;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+}
+
+.contact-wrapper form input {
+  width: 100%;
+  padding: 10px 100px 10px 15px;
+  margin-bottom: 13px;
+  border-radius: 18px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: #fff;
+}
+
+.contact-wrapper form input::placeholder {
+  font-size: 12px;
+}
+
+.contact-wrapper form textarea {
+  width: 100%;
+  padding: 20px 100px 20px 15px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 18px;
+  resize: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+.contact-wrapper form textarea::placeholder {
+  font-size: 14px;
+}
+
+.contact-wrapper form button {
+  display: block;
+  margin-top: 5px;
+  padding: 10px 20px;
+  color: whitesmoke;
+  text-decoration: none;
+  border-radius: 18px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  width: 100%;
+}
+
+.contact-wrapper form button:hover {
+  transform: scale(1.1);
+  background-color: #46bd86;
+  transition: 0.2s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* footer */
+footer {
+  text-align: center;
+  padding: 15px 0;
+  color: #fff;
+  margin-top: 50px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.7px);
+  -webkit-backdrop-filter: blur(8.7px);
+}
