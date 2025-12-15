@@ -364,6 +364,10 @@ footer {
 
 /* Responsive: mobile phone */
 @media screen and (max-width: 576px) {
+  body {
+    background-size: cover;
+  }
+
   /* navbar responsive */
   .navbar {
     top: 0;
@@ -372,6 +376,9 @@ footer {
     height: 50px;
     border-left: none;
     border-right: none;
+    position: fixed;
+    left: 0;
+    right: 0;
   }
 
   .navbar-title h1 {
@@ -389,6 +396,7 @@ footer {
 
   /* hero section responsive */
   .hero-section {
+    padding-top: 55px;
     flex-direction: column;
     justify-content: center;
     height: 100vh;
@@ -396,7 +404,7 @@ footer {
   }
 
   .hero-content {
-    max-width: 20rem;
+    max-width: 21rem;
     padding-left: 0;
   }
 
