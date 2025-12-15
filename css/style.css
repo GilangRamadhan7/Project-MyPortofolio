@@ -376,9 +376,6 @@ footer {
     height: 50px;
     border-left: none;
     border-right: none;
-    position: fixed;
-    left: 0;
-    right: 0;
   }
 
   .navbar-title h1 {
@@ -396,7 +393,6 @@ footer {
 
   /* hero section responsive */
   .hero-section {
-    padding-top: 55px;
     flex-direction: column;
     justify-content: center;
     height: 100vh;
