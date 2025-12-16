@@ -348,16 +348,13 @@ body::before {
 }
 
 /* footer */
-footer {
+.footer {
   text-align: center;
   padding: 15px 0;
   color: #fff;
   margin-top: 50px;
   /* From https://css.glass */
-  background: rgba(255, 255, 255, 0);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(8.7px);
-  -webkit-backdrop-filter: blur(8.7px);
+  background-color: #46bd86;
 }
 
 /* Breakpoint */
@@ -421,7 +418,20 @@ footer {
 
   /* skills-section responsive */
   .skills-section {
+    padding: 0 35px;
+  }
+
+  /* contact-section responsive */
+  .contact-section {
     flex-direction: column;
+    padding: 35px;
+    gap: 2rem;
+  }
+
+  /* footer responsive */
+  .footer {
+    padding: 10px;
+    font-size: 15px;
   }
 }
 
