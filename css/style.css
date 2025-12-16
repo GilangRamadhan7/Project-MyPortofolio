@@ -407,6 +407,7 @@ body::before {
 
   /* about-section responsive */
   .about-section {
+    margin-top: 100px;
     flex-direction: column;
     gap: 3rem;
   }
@@ -418,14 +419,25 @@ body::before {
 
   /* skills-section responsive */
   .skills-section {
+    margin-top: 150px;
     padding: 0 35px;
+  }
+
+  .skills-card p {
+    margin-top: 10px;
+    font-size: 13px;
   }
 
   /* contact-section responsive */
   .contact-section {
+    margin-top: 150px;
     flex-direction: column;
     padding: 35px;
     gap: 2rem;
+  }
+
+  .contact-title {
+    max-width: 30rem;
   }
 
   /* footer responsive */
